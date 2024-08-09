@@ -1,0 +1,741 @@
+body {
+    overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper {
+    height: 60vh;
+}
+
+.lower {
+    height: 40vh;
+    background-color: #3c8429;
+}
+
+.name {
+    text-align: center;
+    font-size: 25px;
+}
+
+.logo {
+    width: 30rem;
+    height: 10rem;
+    margin-top: 2rem;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    font-size: 4rem;
+    color: white;
+    font-weight: 500;
+    margin: 1rem 3rem;
+}
+
+.signin {
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 50%;
+    border: 7px solid #9fd148;
+    align-self: flex-end;
+    /* align-self: center; */
+    background-color: white;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    transform: translate(-50%, -50%);
+}
+
+.login {
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 3.5rem;
+    color: #227d30;
+    text-transform: uppercase;
+}
+
+/* Targeting both div.form and form.form */
+.signin .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signin .form .inputBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.signin .form .inputBox input {
+    position: relative;
+    width: 100%;
+    background: #d8d7d7;
+    border: none;
+    outline: none;
+    padding: 20px 10px 7.5px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.signin .form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: #227d30;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.signin .form .inputBox input:focus ~ i,
+.signin .form .inputBox input:valid ~ i {
+    /* transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: #227d30; */
+    display: none;
+}
+
+.username-error, .password-error{
+    color: red;
+}
+
+.signin .form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+}
+
+.signin .form .links a {
+    color: #227d30;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.signin .form .links .forgot-password {
+    text-decoration: underline;
+}
+
+.signup{
+    color: #227d30;
+    font-weight: 600;
+}
+
+.signin .form .inputBox input[type="submit"] {
+    padding: 10px;
+    background: #227d30;
+    font-weight: 600;
+    font-size: 1.35em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    opacity: 0.6;
+}
+
+.signup-btns {
+    display: flex;
+    gap: 13px;
+}
+
+.cancel-signup {
+    padding: 10px;
+    background: #227d30;
+    font-weight: 600;
+    font-size: 1.35em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+@media((max-width: 1200px) and (min-width: 1000px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+    }
+    .signin{
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .login{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+    
+    .signin .form{
+        gap: 5px;
+    }
+
+    .inputBox{
+        width: 80%;
+    }
+
+    .title{
+        font-size: 3.5rem;
+    }
+
+    .signin .form .inputBox input{
+        padding: 11px 7px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.9rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 13px;
+    }
+
+    .cancel-signup {
+        padding: 4px;
+        font-size: 1rem;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 5px;
+        font-size: 1em;
+    }
+
+}
+
+@media((max-width: 999px) and (min-width: 900px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 17rem;
+        height: 17rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .login{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .signin .form{
+        gap: 7px;
+    }
+
+    .inputBox{
+        width: 80%;
+    }
+
+    .signin .form .inputBox input{
+        /* padding: 11px 7px; */
+        padding: 20px 10px 7.5px;
+    }
+
+    .title{
+        font-size: 3.5rem;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.9rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 13px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 6px;
+    }
+
+    /* .cancel-signup {
+        padding: 4px;
+        font-size: 1rem;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 5px;
+        font-size: 1em;
+    } */
+
+}
+
+@media((max-width: 899px) and (min-width: 700px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 14rem;
+        height: 14rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .cancel-signup {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .signin .form .inputBox input[type="submit"]{
+        font-size: 1rem;
+    }
+
+    .signup-btns{
+        gap: 9px;
+    }
+
+    .login{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .signin .form{
+        gap: 7px;
+    } 
+
+    .title{
+        font-size: 3.5rem;
+    }
+    /* .inputBox{
+        width: 80%;
+    } */
+
+    .logo {
+        width: 27rem;
+        height: 8rem;
+        margin-top: 2rem;
+    }
+
+    .signin .form .inputBox input{
+        /* padding: 10px 7px; */
+        padding: 20px 10px 7.5px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.85rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 13px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 5px;
+    }
+
+    .username-error, .password-error, .check-username{
+        font-size: 12px;
+    }
+
+}
+
+@media((max-width: 699px) and (min-width: 500px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 12rem;
+        height: 12rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .cancel-signup {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .signin .form .inputBox input[type="submit"]{
+        font-size: 1rem;
+    }
+
+    .signup-btns{
+        gap: 6px;
+    }
+
+    .login{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+    .signin .form{
+        gap: 6px;
+    } 
+
+    .title{
+        font-size: 2.7rem;
+    }
+    /* .inputBox{
+        width: 80%;
+    } */
+
+    .logo{
+        width: 25rem;
+        height: 8rem;
+    }
+
+    .signin .form .inputBox input{
+        padding: 10px 7px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.85rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 13px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 5px;
+    }
+
+    .username-error, .password-error, .check-username{
+        font-size: 12px;
+    }
+}
+
+@media((max-width: 499px) and (min-width: 400px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 12rem;
+        height: 12rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .login{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+    .signin .form{
+        gap: 6px;
+    } 
+
+    .title{
+        font-size: 2rem;
+    }
+    /* .inputBox{
+        width: 80%;
+    } */
+
+    .logo{
+        width: 23rem;
+        height: 7rem;
+    }
+
+    .signin .form .inputBox input{
+        padding: 9px 6px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.8rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 13px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 5px;
+    }
+
+    .username-error, .password-error, .check-username{
+        font-size: 12px;
+    }
+
+    .cancel-signup {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .signin .form .inputBox input[type="submit"]{
+        font-size: 1rem;
+    }
+
+    .signup-btns{
+        gap: 6px;
+    }
+}
+
+@media((max-width: 399px) and (min-width: 370px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 12rem;
+        height: 12rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .login{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+    .signin .form{
+        gap: 6px;
+    } 
+
+    .title{
+        font-size: 2rem;
+    }
+    /* .inputBox{
+        width: 80%;
+    } */
+
+    .logo{
+        width: 23rem;
+        height: 7rem;
+    }
+
+    .signin .form .inputBox input{
+        padding: 9px 6px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.8rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 13px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 5px;
+    }
+
+    .username-error, .password-error, .check-username{
+        font-size: 12px;
+    }
+
+    .cancel-signup {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .signin .form .inputBox input[type="submit"]{
+        font-size: 1rem;
+    }
+
+    .signup-btns{
+        gap: 6px;
+    }
+
+}
+
+@media((max-width: 369px) and (min-width: 300px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 11rem;
+        height: 11rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .login{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+    .signin .form{
+        gap: 6px;
+    } 
+
+    .title{
+        font-size: 2rem;
+    }
+    /* .inputBox{
+        width: 80%;
+    } */
+
+    .logo{
+        width: 20rem;
+        height: 6rem;
+    }
+
+    .signin .form .inputBox input{
+        padding: 8px 7px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.73rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 12px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 4px;
+        font-size: 1.2rem;
+    }
+
+    .username-error, .password-error, .check-username{
+        font-size: 11px;
+    }
+
+    .cancel-signup {
+        padding: 7px;
+        font-size: 0.8rem;
+    }
+
+    .signin .form .inputBox input[type="submit"]{
+        font-size: 0.8rem;
+    }
+
+    .signup-btns{
+        gap: 6px;
+    }
+
+}
+
+@media((max-width: 299px) and (min-width: 200px)){
+    .upper{
+        height: 50vh;
+    }
+    .lower{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .signin{
+        width: 8rem;
+        height: 8rem;
+        /* align-self: center; */
+        align-self: center;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .login{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+    .signin .form{
+        gap: 6px;
+    } 
+
+    .title{
+        font-size: 1.5rem;
+    }
+    /* .inputBox{
+        width: 80%;
+    } */
+
+    .logo{
+        width: 14rem;
+        height: 4rem;
+    }
+
+    .signin .form .inputBox input{
+        padding: 4px 3px;
+    }
+
+    .signin .form .inputBox i{
+        font-size: 0.5rem;
+    }
+
+    .signin .form .links .forgot-password{
+        font-size: 10px;
+    }
+
+    .signin .form .links a{
+        font-size: 12px;
+    }
+    
+    .signin .form .inputBox input[type="submit"]{
+        padding: 3px;
+        font-size: 1rem;
+    }
+
+    .username-error, .password-error, .check-username{
+        font-size: 8px;
+        /* letter-spacing: 1px; */
+    }
+
+    .cancel-signup {
+        padding: 5px;
+        font-size: 0.6rem;
+    }
+
+    .signin .form .inputBox input[type="submit"]{
+        font-size: 0.6rem;
+    }
+
+    .signup-btns{
+        gap: 4px;
+    }
+
+}
